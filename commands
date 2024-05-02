@@ -1,0 +1,22 @@
+sudo yum update
+sudo wget -O /etc/yum.repos.d/jenkins.repo \
+https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm - import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+sudo dnf install java-17-amazon-corretto -y
+sudo yum install jenkins –y
+sudo systemctl enable jenkins
+sudo systemctl start jenkins
+sudo systemctl status Jenkins
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+sudo yum update
+sudo dnf install java-17-amazon-corretto -y
+ssh-keygen
+sudo cat id_rsa.pub
+cd .ssh/
+vim authorized_keys
+wq!
+ssh 172.31.40.47
+ls
+cd jenkins
+cd workspace
+cd Assignment1-Job
